@@ -14,7 +14,7 @@ public class PlayerAvatar : MonoBehaviour {
     private float horzTarget;
     private Vector3 velocity;
 
-    void OnEnable() {
+    private void OnEnable() {
         if (side.Equals(PlayerSide.Bottom)) {
             InputManager.BottomPlayerStartMoveEvent += OnStartMoveInput;
             InputManager.BottomPlayerDeltaMoveEvent += OnMoveInput;
@@ -26,7 +26,7 @@ public class PlayerAvatar : MonoBehaviour {
         }
     }
     
-    void OnDisable() {
+    private void OnDisable() {
         if (side.Equals(PlayerSide.Bottom)) {
             InputManager.BottomPlayerStartMoveEvent -= OnStartMoveInput;
             InputManager.BottomPlayerDeltaMoveEvent -= OnMoveInput;
@@ -42,18 +42,18 @@ public class PlayerAvatar : MonoBehaviour {
         }
     }
 
-    void OnStartMoveInput() {
+    private void OnStartMoveInput() {
     }
 
-    void OnMoveInput(float targetPosX) {
+    private void OnMoveInput(float targetPosX) {
         horzTarget = targetPosX;
     }
 
-    void OnEndMoveInput() {
+    private void OnEndMoveInput() {
         velocity = Vector3.zero;
     }
 
-    void Update() {
+    private void Update() {
         velocity.x = (horzTarget - transform.position.x) * moveSpeed;
         transform.position += velocity * Time.deltaTime;
     }

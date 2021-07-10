@@ -30,7 +30,7 @@ public class Player : MonoBehaviour {
         myWall.transform.position = Vector3.up * ((isBottom ? -1f : 1f) * (Cam.Instance.TopEdge + 1.5f));
     }
 
-    void CreatePlayerAvatar() {
+    private void CreatePlayerAvatar() {
         if (currAvatar != null) Destroy(currAvatar.gameObject);
 
         var pos = Vector3.up * (Cam.Instance.TopEdge * (IsBottom ? -1f : 1f));
@@ -46,15 +46,15 @@ public class Player : MonoBehaviour {
         currAvatar = Instantiate(avatarInst, pos, Quaternion.Euler(0f, 0f, IsBottom ? 0f : 180f));
     }
 
-    void OnEnable() {
+    private void OnEnable() {
         Ball.BlowUpEvent += OnBallBlowUp;
     }
 
-    void OnDisable() {
+    private void OnDisable() {
         Ball.BlowUpEvent -= OnBallBlowUp;
     }
 
-    void OnBallBlowUp(Collider2D other) {
+    private void OnBallBlowUp(Collider2D other) {
         if (other != myWall) {
             score++;
             scoreRef.value = score;

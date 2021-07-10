@@ -12,11 +12,6 @@ public class BallManager : MonoBehaviour {
         ballConfigs = Resources.LoadAll<BallConfig>("Ball Configs/");
         Debug.Log($"Loaded {ballConfigs.Length} ball configs");
     }
-    
-    private void Start() {
-        CreateBall();
-        ShootBall();
-    }
 
     private void ShootBall() {
         currentBall.Shoot();
@@ -26,7 +21,7 @@ public class BallManager : MonoBehaviour {
         if (currentBall != null) {
             Destroy(currentBall.gameObject);
         }
-        
+
         currentBall = Instantiate(ballInstance, Vector3.zero, Quaternion.identity);
         var config = ballConfigs[Random.Range(0, ballConfigs.Length)];
         Debug.Log($"Using ball config: {config.name}");
@@ -35,10 +30,12 @@ public class BallManager : MonoBehaviour {
 
     private void OnEnable() {
         Ball.BlowUpEvent += OnBallBlowUp;
+        MainMenuScreen.PlayButtonClickEvent += OnPlayButtonClick;
     }
 
     private void OnDisable() {
         Ball.BlowUpEvent -= OnBallBlowUp;
+        MainMenuScreen.PlayButtonClickEvent -= OnPlayButtonClick;
     }
 
     private void OnBallBlowUp(Collider2D other) {
@@ -47,11 +44,15 @@ public class BallManager : MonoBehaviour {
 
     private IEnumerator ResetBall() {
         yield return new WaitForSeconds(0.5f);
-        
+
         CreateBall();
-        
+
         yield return new WaitForSeconds(1f);
-        
+
         ShootBall();
+    }
+
+    private void OnPlayButtonClick() {
+        StartCoroutine(ResetBall());
     }
 }

@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour {
     private float topDownPosX;
     private bool isBottomDown;
     private float bottomDownPosX;
+    private bool isActive;
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
@@ -26,10 +27,16 @@ public class InputManager : MonoBehaviour {
 
     private void OnEnable() {
         playerInputActions.Enable();
+        MainMenuScreen.PlayButtonClickEvent += OnPlayButtonClick;
     }
 
     private void OnDisable() {
         playerInputActions.Disable();
+        MainMenuScreen.PlayButtonClickEvent -= OnPlayButtonClick;
+    }
+
+    private void OnPlayButtonClick() {
+        isActive = true;
     }
 
     private void Start() {
@@ -43,7 +50,7 @@ public class InputManager : MonoBehaviour {
     }
 
     private void TopStartTouch(InputAction.CallbackContext context) {
-        if (IsOverUI || isTopDown) return;
+        if (IsOverUI || isTopDown || !isActive) return;
 
         var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsTop.TouchPosition.ReadValue<Vector2>());
         if (worldPos.y > 0f) {
@@ -54,7 +61,7 @@ public class InputManager : MonoBehaviour {
     }
     
     private void TopEndTouch(InputAction.CallbackContext context) {
-        if (!isTopDown) return;
+        if (!isTopDown || !isActive) return;
         
         var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsTop.TouchPosition.ReadValue<Vector2>());
         // if (worldPos.y > 0f) {
@@ -64,6 +71,8 @@ public class InputManager : MonoBehaviour {
     }
     
     private void TopMoveTouch(InputAction.CallbackContext context) {
+        if (!isActive) return;
+        
         if (isTopDown) {
             var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsTop.TouchPosition.ReadValue<Vector2>());
             TopPlayerDeltaMoveEvent?.Invoke(worldPos.x);
@@ -71,7 +80,7 @@ public class InputManager : MonoBehaviour {
     }
     
     private void BottomStartTouch(InputAction.CallbackContext context) {
-        if (IsOverUI || isBottomDown) return;
+        if (IsOverUI || isBottomDown || !isActive) return;
         
         var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsBottom.TouchPosition.ReadValue<Vector2>());
         if (worldPos.y < 0f) {
@@ -82,7 +91,7 @@ public class InputManager : MonoBehaviour {
     }
     
     private void BottomEndTouch(InputAction.CallbackContext context) {
-        if (!isBottomDown) return;
+        if (!isBottomDown || !isActive) return;
         
         var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsBottom.TouchPosition.ReadValue<Vector2>());
         // if (worldPos.y < 0f) {
@@ -92,6 +101,8 @@ public class InputManager : MonoBehaviour {
     }
     
     private void BottomMoveTouch(InputAction.CallbackContext context) {
+        if (!isActive) return;
+        
         if (isBottomDown) {
             var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsBottom.TouchPosition.ReadValue<Vector2>());
             BottomPlayerDeltaMoveEvent?.Invoke(worldPos.x);
