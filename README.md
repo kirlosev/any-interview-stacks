@@ -44,7 +44,7 @@ Two opposing guilds fight each other protecting their resources!
 - [x] Make the play area smaller than the screen size so there's space for fingers on the top and the bottom of the screen and for the UI
      - [x] Make the goal area behind players with resources stashed there
      - [ ] On the sides make walls get revealed when the ball or players get near it with a soft mask
-     - [ ] Stop players from going further than side walls would allow them to
+     - [x] Stop players from going further than side walls would allow them to
 - [ ] Update black color on the sprites to not so black
 - [ ] A lot of VFXs and Juice
 - [ ] Make environment more interesting with some sprites
