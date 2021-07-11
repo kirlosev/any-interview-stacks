@@ -39,7 +39,7 @@ Two opposing guilds fight each other protecting their resources!
 
 ## Ways to improve the implementation
 
-- Separacte the trail colors from the BallConfig into a different speed types assets (e.g. Fast, Slow, etc) where you would store a speed and a matching color for this speed to show in the game. So that when you design more balls you don't have to copy paste speed and trail color values, but you could just pick an asset that would store all of the data about speed things. Kind of like it's done with BallSize.
+- Separacte the trail colors from the BallConfig into different speed type assets (e.g. Fast, Slow, etc) where you would store a speed and a matching color for this speed to show in the game. So that when you design more balls you don't have to copy paste speed and trail color values, but you could just pick an asset that would store all of the data about speed things. Kind of like it's done with BallSize.
 - ???
 
 ## Ways to improve the game design
