@@ -1,7 +1,5 @@
 # Fruits vs Veggies
 
-A game I've made for a job interview. Thought it would be neat to keep it here for future.
-
 ## Description
 
 Two opposing guilds fight each other protecting their resources!
