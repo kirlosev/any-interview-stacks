@@ -10,9 +10,15 @@ public enum PlayerSide {
 public class PlayerAvatar : MonoBehaviour {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private PlayerSide side = PlayerSide.Bottom;
+    [SerializeField] private FloatVariable widthOffsetRef;
 
     private float horzTarget;
     private Vector3 velocity;
+    private BoxCollider2D racketCollider;
+
+    private void Awake() {
+        racketCollider = GetComponent<BoxCollider2D>();
+    }
 
     private void OnEnable() {
         if (side.Equals(PlayerSide.Bottom)) {
@@ -56,5 +62,11 @@ public class PlayerAvatar : MonoBehaviour {
     private void Update() {
         velocity.x = (horzTarget - transform.position.x) * moveSpeed;
         transform.position += velocity * Time.deltaTime;
+
+        if (Mathf.Abs(transform.position.x) > HorzMaxPos) {
+            transform.position = new Vector3(Mathf.Sign(transform.position.x) * HorzMaxPos, transform.position.y);
+        }
     }
+
+    private float HorzMaxPos => Cam.Instance.RightEdge - widthOffsetRef.value - racketCollider.size.x/2f;
 }

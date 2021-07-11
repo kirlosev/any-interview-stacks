@@ -159,6 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  side: 1
+  widthOffsetRef: {fileID: 11400000, guid: 1bb3b2759072041d9a53e716815c2f40, type: 2}
 --- !u!61 &8643885787617640166
 BoxCollider2D:
   m_ObjectHideFlags: 0

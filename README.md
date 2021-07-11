@@ -8,25 +8,25 @@ Two opposing guilds fight each other protecting their resources!
 
 ## Implementation notes
 
-- The ball has different sprites depending on the size so players could easily identify it as opposed to just scaling the ball up and down. 
-
+- The ball has different sprites depending on the size so players could easily identify it as opposed to just scaling the ball up and down.  
     Personally, I believe my approach would also make much more sense in the production of a real game.
 
 - Balls parameters are configurable through Scriptable Objects of type BallConfig. These object identify all of the parameters of the possible balls, including their size which also requires a sprite.
 
 - Depending on the speed the color of balls trail will change to the one set in the config so Players could identify it more easier.
 
-- The project uses Unity's new Input System, because it's cool and all of that.
-
-    There's a different approach possible: to move the player by the distance that finger moves. Needs some changes in PlayerAvatar class. 
-    
+- The project uses Unity's new Input System, because it's cool and all of that.  
+    There's a different approach possible: to move the player by the distance that finger moves. Needs some changes in PlayerAvatar class.  
     But the implemented approach where the platforms just follows the players just feels better to me personally.
 
 - Also I chose to use URP because I believe it's the default future of Unity.
 
-- Changing the colour of the ball is achieved by using a Unity's ShaderLab shader which implements palette swapping. 
-
+- Changing the colour of the ball is achieved by using a Unity's ShaderLab shader which implements palette swapping.  
     It takes a gray-scale sprite of the ball and a gradient texture and then maps one on another. This should help with scalability of the project thus allowing creating many more balls without the need to create a colored variation for each of them. Works well for pixel art games!
+
+- The size of the play area is determined by offsets from the width and height of the screen. It's stored in Scriptable Object assets in the Assets/Level folder.  
+    In the first iteration of the game I've made it so that the play area takes the entire screen, but realized that on mobile fingers would obstruct the view on rackets and get in the way so I've decided to add a buffer zone.  
+    But it also serves a secondary fuction as it makes it more clear to see the hit/goal area.
 
 ## Ways to improve the implementation
 
@@ -41,7 +41,10 @@ Two opposing guilds fight each other protecting their resources!
 
 - [ ] Test controls on mobile (kind of important)
 - [ ] Implement the realtime multiplayer
-- [ ] Make the play area smaller than the screen size so there's space for fingers on the top and the bottom of the screen and for the UI
-     - [ ] Make the goal area behind players with resources stashed there
+- [x] Make the play area smaller than the screen size so there's space for fingers on the top and the bottom of the screen and for the UI
+     - [x] Make the goal area behind players with resources stashed there
      - [ ] On the sides make walls get revealed when the ball or players get near it with a soft mask
      - [ ] Stop players from going further than side walls would allow them to
+- [ ] Update black color on the sprites to not so black
+- [ ] A lot of VFXs and Juice
+- [ ] Make environment more interesting with some sprites
