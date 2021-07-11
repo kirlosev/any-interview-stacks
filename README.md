@@ -6,6 +6,10 @@ A game I've made for a job interview. Thought it would be neat to keep it here f
 
 Two opposing guilds fight each other protecting their resources!
 
+### Controls:  
+- Keyboard: A/D for the top player and Left/Right arrows for the bottom player  
+- Touchscreen: The screen is divided between two players. There's a line. Use your finger.
+
 ## Implementation notes
 
 - The ball has different sprites depending on the size so players could easily identify it as opposed to just scaling the ball up and down.  
