@@ -15,6 +15,7 @@ public class PlayerAvatar : MonoBehaviour {
     private float horzTarget;
     private Vector3 velocity;
     private BoxCollider2D racketCollider;
+    private float moveDelta;
 
     private void Awake() {
         racketCollider = GetComponent<BoxCollider2D>();
@@ -22,45 +23,36 @@ public class PlayerAvatar : MonoBehaviour {
 
     private void OnEnable() {
         if (side.Equals(PlayerSide.Bottom)) {
-            InputManager.BottomPlayerStartMoveEvent += OnStartMoveInput;
-            InputManager.BottomPlayerDeltaMoveEvent += OnMoveInput;
-            InputManager.BottomPlayerEndMoveEvent += OnEndMoveInput;
+            InputManager.BottomPlayerMoveToPositionEvent += OnMoveToPositionInput;
+            InputManager.BottomPlayerMoveDeltaEvent += OnMoveDeltaInput;
         } else if (side.Equals(PlayerSide.Top)) {
-            InputManager.TopPlayerStartMoveEvent += OnStartMoveInput;
-            InputManager.TopPlayerDeltaMoveEvent += OnMoveInput;
-            InputManager.TopPlayerEndMoveEvent += OnEndMoveInput;
+            InputManager.TopPlayerMoveToPositionEvent += OnMoveToPositionInput;
+            InputManager.TopPlayerMoveDeltaEvent += OnMoveDeltaInput;
         }
     }
     
     private void OnDisable() {
         if (side.Equals(PlayerSide.Bottom)) {
-            InputManager.BottomPlayerStartMoveEvent -= OnStartMoveInput;
-            InputManager.BottomPlayerDeltaMoveEvent -= OnMoveInput;
-            InputManager.BottomPlayerEndMoveEvent -= OnEndMoveInput;
+            InputManager.BottomPlayerMoveToPositionEvent -= OnMoveToPositionInput;
+            InputManager.BottomPlayerMoveDeltaEvent -= OnMoveDeltaInput;
         }
         else if (side.Equals(PlayerSide.Top)) {
-            InputManager.TopPlayerStartMoveEvent -= OnStartMoveInput;
-            InputManager.TopPlayerDeltaMoveEvent -= OnMoveInput;
-            InputManager.TopPlayerEndMoveEvent -= OnEndMoveInput;
-        }
-        else {
-            Debug.LogError($"The side for {gameObject.name} is not selected correctly");
+            InputManager.TopPlayerMoveToPositionEvent -= OnMoveToPositionInput;
+            InputManager.TopPlayerMoveDeltaEvent -= OnMoveDeltaInput;
         }
     }
 
-    private void OnStartMoveInput() {
-    }
-
-    private void OnMoveInput(float targetPosX) {
+    private void OnMoveToPositionInput(float targetPosX) {
         horzTarget = targetPosX;
+        moveDelta = horzTarget - transform.position.x;
     }
 
-    private void OnEndMoveInput() {
-        velocity = Vector3.zero;
+    private void OnMoveDeltaInput(float delta) {
+        moveDelta = delta;
     }
 
     private void Update() {
-        velocity.x = (horzTarget - transform.position.x) * moveSpeed;
+        velocity.x = moveDelta * moveSpeed;
         transform.position += velocity * Time.deltaTime;
 
         if (Mathf.Abs(transform.position.x) > HorzMaxPos) {

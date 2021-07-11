@@ -15,8 +15,8 @@ Two opposing guilds fight each other protecting their resources!
 
 - Depending on the speed the color of balls trail will change to the one set in the config so Players could identify it more easier.
 
-- The project uses Unity's new Input System, because it's cool and all of that.  
-    Turn on Simulated Touch if you run the game in the Editor to control the game with a mouse.
+- I decided to risk and use Unity's new Input System, because it's cool and all of that. And I was curious about implementing that multitouch controls with it.  
+    You need to turn on Simulated Touch if you run the game in the Editor to control the game with a mouse. But it also supports controls from the keyboard (A/D for the top player and Left/Right arrows for the bottom player).  
 
     _Go to Window > Analysis > Input Debugger._  
     _Press 'Options' drop-down menu in the top-left corner and select "Simulate Touch Input ..." option._

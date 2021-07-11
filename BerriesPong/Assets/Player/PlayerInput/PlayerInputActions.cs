@@ -28,128 +28,96 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             ""id"": ""f39b4b64-db20-4456-8625-6f89ce161f83"",
             ""actions"": [
                 {
-                    ""name"": ""TouchPress"",
+                    ""name"": ""Move"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""35c47b6b-a27d-4bed-99cb-393aac77cd15"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)""
-                },
-                {
-                    ""name"": ""TouchPosition"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""2a05b563-f770-44bb-97e8-3c9e51d06187"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""TouchDelta"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""52351556-59e1-4603-882c-b0f94b7ad6d1"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""id"": ""65aeb02f-b4ff-48a3-a7ea-57d9d6426b25"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""8cee5a02-d971-4b26-8795-1c7b3b721c95"",
-                    ""path"": ""<Touchscreen>/position"",
+                    ""name"": ""Keyboard"",
+                    ""id"": ""f794cbdc-5051-4a73-9f1b-439fdb108a01"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TouchPosition"",
-                    ""isComposite"": false,
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""099eff76-ba25-485b-96dd-0d4131af4b69"",
-                    ""path"": ""<Touchscreen>/press"",
+                    ""name"": ""negative"",
+                    ""id"": ""8734338c-0811-45d1-b387-e180a7170063"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TouchPress"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""4de35e8c-1110-4c1a-acba-b522c4cb62a0"",
-                    ""path"": ""<Touchscreen>/delta"",
+                    ""name"": ""positive"",
+                    ""id"": ""c711d836-43ab-4ee9-95e1-532f8abab0c0"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TouchDelta"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 }
             ]
         },
         {
             ""name"": ""PlayerControlsBottom"",
-            ""id"": ""6ac4e8c3-fcba-464a-b32b-af78a0fb49ca"",
+            ""id"": ""c7f28d5e-86fb-4187-ab59-e0d26cb03296"",
             ""actions"": [
                 {
-                    ""name"": ""TouchPress"",
+                    ""name"": ""Move"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""d150bd62-42db-41d2-86fd-d42738a90dfb"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)""
-                },
-                {
-                    ""name"": ""TouchPosition"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""c9a88ced-f9c8-4913-86b7-ae8d1e3e1758"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""TouchDelta"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""126ac26e-7c3b-4632-b81f-3da0d9d7d784"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""id"": ""750c143c-73ca-4a80-b808-c39a72f234e6"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""b01b5cd6-3e73-40c6-9352-5b22abe6468d"",
-                    ""path"": ""<Touchscreen>/position"",
+                    ""name"": ""Keyboard"",
+                    ""id"": ""17a93ae1-b4ba-45fc-ad6f-84e870984ece"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TouchPosition"",
-                    ""isComposite"": false,
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""dab1970a-d876-4c3b-b99b-5f2fd2ccdd2f"",
-                    ""path"": ""<Touchscreen>/press"",
+                    ""name"": ""negative"",
+                    ""id"": ""a4f3beaa-d8de-4ada-90fb-8d451808b339"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TouchPress"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""519e8e00-f5d0-4fec-855c-16ec9180a608"",
-                    ""path"": ""<Touchscreen>/delta"",
+                    ""name"": ""positive"",
+                    ""id"": ""270f90e8-ab70-4def-ab76-86a8d7cd0e48"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TouchDelta"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -158,14 +126,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
 }");
         // PlayerControlsTop
         m_PlayerControlsTop = asset.FindActionMap("PlayerControlsTop", throwIfNotFound: true);
-        m_PlayerControlsTop_TouchPress = m_PlayerControlsTop.FindAction("TouchPress", throwIfNotFound: true);
-        m_PlayerControlsTop_TouchPosition = m_PlayerControlsTop.FindAction("TouchPosition", throwIfNotFound: true);
-        m_PlayerControlsTop_TouchDelta = m_PlayerControlsTop.FindAction("TouchDelta", throwIfNotFound: true);
+        m_PlayerControlsTop_Move = m_PlayerControlsTop.FindAction("Move", throwIfNotFound: true);
         // PlayerControlsBottom
         m_PlayerControlsBottom = asset.FindActionMap("PlayerControlsBottom", throwIfNotFound: true);
-        m_PlayerControlsBottom_TouchPress = m_PlayerControlsBottom.FindAction("TouchPress", throwIfNotFound: true);
-        m_PlayerControlsBottom_TouchPosition = m_PlayerControlsBottom.FindAction("TouchPosition", throwIfNotFound: true);
-        m_PlayerControlsBottom_TouchDelta = m_PlayerControlsBottom.FindAction("TouchDelta", throwIfNotFound: true);
+        m_PlayerControlsBottom_Move = m_PlayerControlsBottom.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -225,16 +189,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     // PlayerControlsTop
     private readonly InputActionMap m_PlayerControlsTop;
     private IPlayerControlsTopActions m_PlayerControlsTopActionsCallbackInterface;
-    private readonly InputAction m_PlayerControlsTop_TouchPress;
-    private readonly InputAction m_PlayerControlsTop_TouchPosition;
-    private readonly InputAction m_PlayerControlsTop_TouchDelta;
+    private readonly InputAction m_PlayerControlsTop_Move;
     public struct PlayerControlsTopActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerControlsTopActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @TouchPress => m_Wrapper.m_PlayerControlsTop_TouchPress;
-        public InputAction @TouchPosition => m_Wrapper.m_PlayerControlsTop_TouchPosition;
-        public InputAction @TouchDelta => m_Wrapper.m_PlayerControlsTop_TouchDelta;
+        public InputAction @Move => m_Wrapper.m_PlayerControlsTop_Move;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControlsTop; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -244,28 +204,16 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerControlsTopActionsCallbackInterface != null)
             {
-                @TouchPress.started -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchPress;
-                @TouchPress.performed -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchPress;
-                @TouchPress.canceled -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchPress;
-                @TouchPosition.started -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.performed -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.canceled -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchPosition;
-                @TouchDelta.started -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchDelta;
-                @TouchDelta.performed -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchDelta;
-                @TouchDelta.canceled -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnTouchDelta;
+                @Move.started -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayerControlsTopActionsCallbackInterface.OnMove;
             }
             m_Wrapper.m_PlayerControlsTopActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @TouchPress.started += instance.OnTouchPress;
-                @TouchPress.performed += instance.OnTouchPress;
-                @TouchPress.canceled += instance.OnTouchPress;
-                @TouchPosition.started += instance.OnTouchPosition;
-                @TouchPosition.performed += instance.OnTouchPosition;
-                @TouchPosition.canceled += instance.OnTouchPosition;
-                @TouchDelta.started += instance.OnTouchDelta;
-                @TouchDelta.performed += instance.OnTouchDelta;
-                @TouchDelta.canceled += instance.OnTouchDelta;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
             }
         }
     }
@@ -274,16 +222,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     // PlayerControlsBottom
     private readonly InputActionMap m_PlayerControlsBottom;
     private IPlayerControlsBottomActions m_PlayerControlsBottomActionsCallbackInterface;
-    private readonly InputAction m_PlayerControlsBottom_TouchPress;
-    private readonly InputAction m_PlayerControlsBottom_TouchPosition;
-    private readonly InputAction m_PlayerControlsBottom_TouchDelta;
+    private readonly InputAction m_PlayerControlsBottom_Move;
     public struct PlayerControlsBottomActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerControlsBottomActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @TouchPress => m_Wrapper.m_PlayerControlsBottom_TouchPress;
-        public InputAction @TouchPosition => m_Wrapper.m_PlayerControlsBottom_TouchPosition;
-        public InputAction @TouchDelta => m_Wrapper.m_PlayerControlsBottom_TouchDelta;
+        public InputAction @Move => m_Wrapper.m_PlayerControlsBottom_Move;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControlsBottom; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -293,42 +237,26 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface != null)
             {
-                @TouchPress.started -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchPress;
-                @TouchPress.performed -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchPress;
-                @TouchPress.canceled -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchPress;
-                @TouchPosition.started -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.performed -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.canceled -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchPosition;
-                @TouchDelta.started -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchDelta;
-                @TouchDelta.performed -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchDelta;
-                @TouchDelta.canceled -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnTouchDelta;
+                @Move.started -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface.OnMove;
             }
             m_Wrapper.m_PlayerControlsBottomActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @TouchPress.started += instance.OnTouchPress;
-                @TouchPress.performed += instance.OnTouchPress;
-                @TouchPress.canceled += instance.OnTouchPress;
-                @TouchPosition.started += instance.OnTouchPosition;
-                @TouchPosition.performed += instance.OnTouchPosition;
-                @TouchPosition.canceled += instance.OnTouchPosition;
-                @TouchDelta.started += instance.OnTouchDelta;
-                @TouchDelta.performed += instance.OnTouchDelta;
-                @TouchDelta.canceled += instance.OnTouchDelta;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
             }
         }
     }
     public PlayerControlsBottomActions @PlayerControlsBottom => new PlayerControlsBottomActions(this);
     public interface IPlayerControlsTopActions
     {
-        void OnTouchPress(InputAction.CallbackContext context);
-        void OnTouchPosition(InputAction.CallbackContext context);
-        void OnTouchDelta(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
     }
     public interface IPlayerControlsBottomActions
     {
-        void OnTouchPress(InputAction.CallbackContext context);
-        void OnTouchPosition(InputAction.CallbackContext context);
-        void OnTouchDelta(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
     }
 }

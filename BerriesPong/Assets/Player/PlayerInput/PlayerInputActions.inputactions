@@ -6,128 +6,96 @@
             "id": "f39b4b64-db20-4456-8625-6f89ce161f83",
             "actions": [
                 {
-                    "name": "TouchPress",
+                    "name": "Move",
                     "type": "PassThrough",
-                    "id": "35c47b6b-a27d-4bed-99cb-393aac77cd15",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)"
-                },
-                {
-                    "name": "TouchPosition",
-                    "type": "PassThrough",
-                    "id": "2a05b563-f770-44bb-97e8-3c9e51d06187",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "TouchDelta",
-                    "type": "PassThrough",
-                    "id": "52351556-59e1-4603-882c-b0f94b7ad6d1",
-                    "expectedControlType": "Vector2",
+                    "id": "65aeb02f-b4ff-48a3-a7ea-57d9d6426b25",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "8cee5a02-d971-4b26-8795-1c7b3b721c95",
-                    "path": "<Touchscreen>/position",
+                    "name": "Keyboard",
+                    "id": "f794cbdc-5051-4a73-9f1b-439fdb108a01",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchPosition",
-                    "isComposite": false,
+                    "action": "Move",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "099eff76-ba25-485b-96dd-0d4131af4b69",
-                    "path": "<Touchscreen>/press",
+                    "name": "negative",
+                    "id": "8734338c-0811-45d1-b387-e180a7170063",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchPress",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "4de35e8c-1110-4c1a-acba-b522c4cb62a0",
-                    "path": "<Touchscreen>/delta",
+                    "name": "positive",
+                    "id": "c711d836-43ab-4ee9-95e1-532f8abab0c0",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchDelta",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         },
         {
             "name": "PlayerControlsBottom",
-            "id": "6ac4e8c3-fcba-464a-b32b-af78a0fb49ca",
+            "id": "c7f28d5e-86fb-4187-ab59-e0d26cb03296",
             "actions": [
                 {
-                    "name": "TouchPress",
+                    "name": "Move",
                     "type": "PassThrough",
-                    "id": "d150bd62-42db-41d2-86fd-d42738a90dfb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)"
-                },
-                {
-                    "name": "TouchPosition",
-                    "type": "PassThrough",
-                    "id": "c9a88ced-f9c8-4913-86b7-ae8d1e3e1758",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "TouchDelta",
-                    "type": "PassThrough",
-                    "id": "126ac26e-7c3b-4632-b81f-3da0d9d7d784",
-                    "expectedControlType": "Vector2",
+                    "id": "750c143c-73ca-4a80-b808-c39a72f234e6",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "b01b5cd6-3e73-40c6-9352-5b22abe6468d",
-                    "path": "<Touchscreen>/position",
+                    "name": "Keyboard",
+                    "id": "17a93ae1-b4ba-45fc-ad6f-84e870984ece",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchPosition",
-                    "isComposite": false,
+                    "action": "Move",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "dab1970a-d876-4c3b-b99b-5f2fd2ccdd2f",
-                    "path": "<Touchscreen>/press",
+                    "name": "negative",
+                    "id": "a4f3beaa-d8de-4ada-90fb-8d451808b339",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchPress",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "519e8e00-f5d0-4fec-855c-16ec9180a608",
-                    "path": "<Touchscreen>/delta",
+                    "name": "positive",
+                    "id": "270f90e8-ab70-4def-ab76-86a8d7cd0e48",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchDelta",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         }
