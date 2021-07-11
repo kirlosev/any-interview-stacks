@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "TouchPress",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "35c47b6b-a27d-4bed-99cb-393aac77cd15",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -34,18 +34,7 @@
                 {
                     "name": "",
                     "id": "8cee5a02-d971-4b26-8795-1c7b3b721c95",
-                    "path": "<Touchscreen>/touch0/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchPosition",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3033d4ce-147a-4e66-ac7e-ce058cd40c0a",
-                    "path": "<Touchscreen>/touch1/position",
+                    "path": "<Touchscreen>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -56,18 +45,7 @@
                 {
                     "name": "",
                     "id": "099eff76-ba25-485b-96dd-0d4131af4b69",
-                    "path": "<Touchscreen>/touch0/press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchPress",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b3b1aaa3-1adc-48f6-8a74-2a8c3868e08d",
-                    "path": "<Touchscreen>/touch1/press",
+                    "path": "<Touchscreen>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -78,18 +56,7 @@
                 {
                     "name": "",
                     "id": "4de35e8c-1110-4c1a-acba-b522c4cb62a0",
-                    "path": "<Touchscreen>/touch0/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchDelta",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1d3cf1d0-82a4-434f-ac56-b8956db6c857",
-                    "path": "<Touchscreen>/touch1/delta",
+                    "path": "<Touchscreen>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -101,12 +68,12 @@
         },
         {
             "name": "PlayerControlsBottom",
-            "id": "00f3db76-0cd8-4fb0-a0e1-a4aa7d69bdbe",
+            "id": "6ac4e8c3-fcba-464a-b32b-af78a0fb49ca",
             "actions": [
                 {
                     "name": "TouchPress",
-                    "type": "Button",
-                    "id": "f3833279-a1cd-4ca4-9710-215eb1bfa41b",
+                    "type": "PassThrough",
+                    "id": "d150bd62-42db-41d2-86fd-d42738a90dfb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
@@ -114,7 +81,7 @@
                 {
                     "name": "TouchPosition",
                     "type": "PassThrough",
-                    "id": "0b8bf16c-4cd9-42c7-bfbb-0a1795f1633c",
+                    "id": "c9a88ced-f9c8-4913-86b7-ae8d1e3e1758",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -122,7 +89,7 @@
                 {
                     "name": "TouchDelta",
                     "type": "PassThrough",
-                    "id": "a1690c94-2240-4ec6-95f7-b31f5ec402ab",
+                    "id": "126ac26e-7c3b-4632-b81f-3da0d9d7d784",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -131,8 +98,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "72c6e75c-4b34-41a1-a360-21ad1c20019f",
-                    "path": "<Touchscreen>/touch0/position",
+                    "id": "b01b5cd6-3e73-40c6-9352-5b22abe6468d",
+                    "path": "<Touchscreen>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -142,19 +109,8 @@
                 },
                 {
                     "name": "",
-                    "id": "e85ce0da-47cd-427a-8b45-c0e405537a86",
-                    "path": "<Touchscreen>/touch1/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchPosition",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "30d3afdb-5233-4006-acde-56628c2c1448",
-                    "path": "<Touchscreen>/touch0/press",
+                    "id": "dab1970a-d876-4c3b-b99b-5f2fd2ccdd2f",
+                    "path": "<Touchscreen>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -164,30 +120,8 @@
                 },
                 {
                     "name": "",
-                    "id": "34e0d9eb-664a-4fcc-91b1-34f79e9eb722",
-                    "path": "<Touchscreen>/touch1/press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchPress",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c7defa6c-44ce-4c6f-a496-4c694dda5209",
-                    "path": "<Touchscreen>/touch0/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchDelta",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "aa3e7943-cd4e-4241-a6fc-41b91443fa7b",
-                    "path": "<Touchscreen>/touch1/delta",
+                    "id": "519e8e00-f5d0-4fec-855c-16ec9180a608",
+                    "path": "<Touchscreen>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -16,8 +16,13 @@ Two opposing guilds fight each other protecting their resources!
 - Depending on the speed the color of balls trail will change to the one set in the config so Players could identify it more easier.
 
 - The project uses Unity's new Input System, because it's cool and all of that.  
-    There's a different approach possible: to move the player by the distance that finger moves. Needs some changes in PlayerAvatar class.  
-    But the implemented approach where the platforms just follows the players just feels better to me personally.
+    Turn on Simulated Touch if you run the game in the Editor to control the game with a mouse.
+
+    _Go to Window > Analysis > Input Debugger._  
+    _Press 'Options' drop-down menu in the top-left corner and select "Simulate Touch Input ..." option._
+
+- There's a different approach possible: to move the player by the distance that finger moves. Needs some changes in PlayerAvatar class.  
+    But the implemented approach where the platforms just follows the player's finger just feels better to me personally.
 
 - Also I chose to use URP because I believe it's the default future of Unity.
 

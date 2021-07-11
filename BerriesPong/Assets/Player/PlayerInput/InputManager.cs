@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class InputManager : MonoBehaviour {
     public static event System.Action TopPlayerStartMoveEvent;
@@ -23,15 +25,16 @@ public class InputManager : MonoBehaviour {
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
+        EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable() {
-        playerInputActions.Enable();
+        // playerInputActions.Enable();
         MainMenuScreen.PlayButtonClickEvent += OnPlayButtonClick;
     }
 
     private void OnDisable() {
-        playerInputActions.Disable();
+        // playerInputActions.Disable();
         MainMenuScreen.PlayButtonClickEvent -= OnPlayButtonClick;
     }
 
@@ -49,9 +52,27 @@ public class InputManager : MonoBehaviour {
         playerInputActions.PlayerControlsBottom.TouchDelta.performed += ctx => BottomMoveTouch(ctx);
     }
 
+    private void Update() {
+        if (!isActive) return;
+
+        var touches = Touch.activeTouches;
+        foreach (var t in touches) {
+            var startWorldPos = Cam.Instance.GetWorldPoint(t.startScreenPosition);
+            var isBottomTouch = startWorldPos.y < 0f;
+            if (isBottomTouch) {
+                var worldPos = Cam.Instance.GetWorldPoint(t.screenPosition);
+                BottomPlayerDeltaMoveEvent?.Invoke(worldPos.x);
+            }
+            else {
+                var worldPos = Cam.Instance.GetWorldPoint(t.screenPosition);
+                TopPlayerDeltaMoveEvent?.Invoke(worldPos.x);
+            }
+        }
+    }
+
     private void TopStartTouch(InputAction.CallbackContext context) {
         if (IsOverUI || isTopDown || !isActive) return;
-
+        
         var worldPos = Cam.Instance.GetWorldPoint(playerInputActions.PlayerControlsTop.TouchPosition.ReadValue<Vector2>());
         if (worldPos.y > 0f) {
             isTopDown = true;
