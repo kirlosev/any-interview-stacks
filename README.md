@@ -10,6 +10,8 @@ Two opposing guilds fight each other protecting their resources!
 
 ## Implementation notes
 
+- Made using Unity 2020.3.13f1
+
 - The ball has different sprites depending on the size so players could easily identify it as opposed to just scaling the ball up and down.  
     Personally, I believe my approach would also make much more sense in the production of a real game.
 
