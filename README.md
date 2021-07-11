@@ -44,7 +44,7 @@ Two opposing guilds fight each other protecting their resources!
 
 ## TODO
 
-- [ ] Test controls on mobile (kind of important)
+- [x] Test controls on mobile (kind of important)
 - [ ] Implement the realtime multiplayer
 - [x] Make the play area smaller than the screen size so there's space for fingers on the top and the bottom of the screen and for the UI
      - [x] Make the goal area behind players with resources stashed there
